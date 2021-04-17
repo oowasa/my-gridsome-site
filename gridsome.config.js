@@ -9,5 +9,5 @@ module.exports = {
   plugins: [],
   port: 8080,
   siteUrl: 'https://oowasa.github.io',
-  pathPrefix: '/my-gridsome-site'
+  pathPrefix: 'my-gridsome-site/'
 }
