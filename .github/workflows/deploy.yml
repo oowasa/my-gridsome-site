@@ -19,7 +19,7 @@ jobs:
 
     # 部署到服务器
     - name: Deploy to Aliyun
-        uses: easingthemes/ssh-deploy@v2.1.5
+        uses: easingthemes/ssh-deploy@v2.1.9
         env:
           # 私钥
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
