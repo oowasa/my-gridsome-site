@@ -16,19 +16,20 @@ jobs:
       uses: actions/setup-node@master
     - run: npm install
     - run: npm run build
-
-    - name: SSH Remote Commands
-        uses: appleboy/ssh-action@master
-        with:
-          host: "114.55.165.204"
-          username: "root"
-          password: "Wan3243065yycheng"
-    # 用SCP将文件传到远端服务器
-    - name: SCP Files to aliyun
-      uses: appleboy/scp-action@master
-      with:
-        host: "114.55.165.204"
-        username: "root"
-        password: "Wan3243065yycheng"
-        source: "./dist"
-        target: "/home/my-gridsome-site"
+    
+    # 部署到服务器
+    - name: Deploy to server
+      uses: easingthemes/ssh-deploy@2.1.5
+        env:
+          # 私钥
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          # scp参数
+          ARGS: "-rltgoDzvO --delete"
+          # 源目录，编译后生成的文件目录
+          SOURCE: "./dist/"
+          # 服务器ip：换成你的服务器IP
+          REMOTE_HOST: "114.55.165.204"
+          # 用户
+          REMOTE_USER: "root"
+          # 目标地址 你在服务器上部署代码的地方
+          TARGET: "/home/my-gridsome-site"
