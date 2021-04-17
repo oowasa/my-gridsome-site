@@ -19,7 +19,7 @@ jobs:
     
     # 部署到服务器
     - name: Deploy to server
-      uses: easingthemes/ssh-deploy@2.1.9
+      uses: easingthemes/ssh-deploy@2
       env:
         # 私钥
         SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
