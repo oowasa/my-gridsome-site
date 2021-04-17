@@ -3,7 +3,14 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+import util from './utils/util';
+
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
+  Vue.use(ElementUI);
+  Vue.prototype.$util = util;
   Vue.component('Layout', DefaultLayout)
 }
