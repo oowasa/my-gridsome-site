@@ -15,5 +15,5 @@ jobs:
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         branch: gh-pages
-        folder: dist
+        folder: './dist'
         BUILD_SCRIPT: npm install && npm run build
