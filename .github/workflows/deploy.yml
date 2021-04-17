@@ -53,5 +53,5 @@ jobs:
           cd /home/my-gridsome-site
           wget https://github.com/oowasa/my-gridsome-site/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
-          npm install
+          yarn
           pm2 reload pm2.config.json
