@@ -1,7 +1,6 @@
 {
   "name": "my-gridsome-site",
   "private": true,
-  "homepage": "https://oowasa.github.io/my-gridsome-site/",
   "scripts": {
     "develop": "gridsome develop",
     "explore": "gridsome explore",

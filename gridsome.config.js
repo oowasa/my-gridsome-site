@@ -8,4 +8,6 @@ module.exports = {
   siteName: 'Gridsome',
   plugins: [],
   port: 8080,
+  siteUrl: 'https://oowasa.github.io',
+  pathPrefix: '/my-gridsome-site'
 }
