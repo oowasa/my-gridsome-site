@@ -23,7 +23,7 @@
                 constantRouterMap,
                 active: "",
                 parentUrl: "",
-                menuList: []
+                menuList: [],
             }
         },
         computed: {
